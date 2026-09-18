@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEETFUCKERS • Exclusive Foot Worship Community & Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+        
+        :root {
+            --accent: #ff1493;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .section-header {
+            font-size: 2.75rem;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+
+        .foot-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .foot-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .gallery-img {
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                       filter 0.3s ease;
+        }
+        
+        .foot-card:hover .gallery-img {
+            transform: scale(1.08);
+        }
+
+        .nav-link {
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #fda4af;
+        }
+
+        .masonry-grid {
+            column-count: 2;
+            column-gap: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 4;
+            }
+        }
+
+        .filter-btn {
+            transition: all 0.2s ease;
+        }
+        
+        .filter-btn.active {
+            background-color: #ff1493;
+            color: white;
+            border-color: #ff1493;
+        }
+
+        .premium-badge {
+            background: linear-gradient(90deg, #ff1493, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .seductive-shadow {
+            box-shadow: 0 10px 15px -3px rgb(255 20 147 / 0.15),
+                        0 4px 6px -4px rgb(255 20 147 / 0.1);
+        }
+
+        .dark-gradient {
+            background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <!-- Navbar -->
+    <nav class="bg-zinc-900/95 backdrop-blur-lg border-b border-zinc-800 sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <!-- Logo - Neon style matching your video logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="relative flex items-center justify-center">
+                        <i class="fa-solid fa-shoe-prints text-[#ff1493] text-[42px] drop-shadow-[0_0_12px_#ff1493]"></i>
+                    </div>
+                    <div class="leading-none">
+                        <span class="font-bold text-[29px] tracking-[-1.2px] text-white">FEET</span><br>
+                        <span class="font-bold text-[29px] tracking-[-1.2px] text-[#ff1493] drop-shadow-[0_0_8px_#ff1493] -mt-1">FUCKERS</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#gallery" class="nav-link text-zinc-300 hover:text-white">Gallery</a>
+                    <a href="#shop" class="nav-link text-zinc-300 hover:text-white">Shop</a>
+                    <a href="#community" class="nav-link text-zinc-300 hover:text-white">Community</a>
+                    <a href="#" class="nav-link text-zinc-300 hover:text-white">Blog</a>
+                </div>
+
+                <!-- Right side actions -->
+                <div class="flex items-center gap-x-3">
+                    <button onclick="showLoginModal()"
+                            class="px-5 py-2.5 text-sm font-semibold text-zinc-300 hover:text-white transition-colors">
+                        Log in
+                    </button>
+                    <button onclick="showJoinModal()"
+                            class="px-6 py-2.5 bg-fuchsia-600 hover:bg-fuchsia-700 transition-all text-white text-sm font-bold rounded-3xl flex items-center gap-x-2 shadow-lg shadow-fuchsia-950">
+                        <span>Join the Vault</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                    
+                    <!-- Mobile menu -->
+                    <button class="md:hidden w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-[92vh] flex items-center justify-center overflow-hidden dark-gradient">
+        <!-- Background image overlay -->
+        <div class="absolute inset-0 bg-[radial-gradient(#27272a_0.5px,transparent_1px)] bg-[length:4px_4px] opacity-40"></div>
+        
+        <div class="max-w-screen-2xl mx-auto px-8 relative z-10">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Text Content -->
+                <div class="md:col-span-7 max-w-3xl">
+                    <div class="inline-flex items-center gap-x-2 bg-zinc-900 border border-zinc-800 rounded-3xl px-4 py-1.5 mb-6">
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span class="text-xs font-semibold tracking-[1.5px] text-emerald-400">NEW DROPS EVERY DAY</span>
+                    </div>
+                    
+                    <h1 class="text-7xl md:text-8xl leading-[0.92] font-bold tracking-tighter heading-serif mb-4">
+                        Worship.<br>
+                        Collect.<br>
+                        <span class="text-pink-500">Belong.</span>
+                    </h1>
+                    
+                    <p class="max-w-md text-xl text-zinc-400 mb-9">
+                        The premier private community and marketplace for foot fetish enthusiasts. 
+                        AI-crafted exclusives, real customs, and a tribe that gets it.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="showJoinModal()"
+                                class="group flex items-center justify-center gap-x-3 bg-white text-zinc-950 hover:bg-zinc-100 transition-all font-bold text-lg px-10 h-14 rounded-3xl shadow-xl active:scale-[0.985]">
+                            <span>Enter the Vault</span>
+                            <i class="fa-solid fa-lock group-active:rotate-12 transition-transform"></i>
+                        </button>
+                        
+                        <button onclick="document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' })"
+                                class="flex items-center justify-center gap-x-3 border border-zinc-700 hover:bg-zinc-900 transition-all font-semibold text-lg px-8 h-14 rounded-3xl">
+                            <span>Browse Free Teases</span>
+                        </button>
+                    </div>
+                    
+                    <div class="flex items-center gap-x-8 mt-10">
+                        <div class="flex -space-x-3">
+                            <div class="w-8 h-8 rounded-full border-2 border-zinc-950 overflow-hidden ring-1 ring-zinc-800"><img src="https://picsum.photos/id/1005/32/32" class="object-cover"></div>
+                            <div class="w-8 h-8 rounded-full border-2 border-zinc-950 overflow-hidden ring-1 ring-zinc-800"><img src="https://picsum.photos/id/1011/32/32" class="object-cover"></div>
+                            <div class="w-8 h-8 rounded-full border-2 border-zinc-950 overflow-hidden ring-1 ring-zinc-800"><img src="https://picsum.photos/id/1009/32/32" class="object-cover"></div>
+                        </div>
+                        <div class="text-sm">
+                            <span class="font-semibold">12,847</span> 
+                            <span class="text-zinc-500">foot lovers inside</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual -->
+                <div class="md:col-span-5 relative hidden lg:block">
+                    <div class="relative rounded-[3.5rem] overflow-hidden shadow-2xl border border-zinc-800 seductive-shadow">
+                        <img src="https://picsum.photos/id/1018/900/1100" 
+                             class="w-full aspect-[4/5] object-cover" alt="Elegant feet in black heels - hero visual">
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/60"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <div class="flex items-center gap-x-2 text-sm">
+                                <div class="px-3 py-1 bg-white/90 text-zinc-950 text-xs font-bold rounded-2xl flex items-center gap-x-1.5">
+                                    <i class="fa-solid fa-crown text-fuchsia-600"></i>
+                                    <span>VIP EXCLUSIVE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 hidden md:block">
+            <div class="flex flex-col items-center text-xs tracking-widest text-zinc-500">
+                <span>SCROLL TO EXPLORE</span>
+                <i class="fa-solid fa-chevron-down mt-1 animate-bounce"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust / Stats Bar -->
+    <div class="border-b border-zinc-800 bg-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8 py-5">
+            <div class="flex flex-wrap justify-between items-center gap-y-4 text-sm">
+                <div class="flex items-center gap-x-8 text-zinc-400">
+                    <div><span class="font-semibold text-white">4,291</span> new drops this month</div>
+                    <div><span class="font-semibold text-white">98.4%</span> member satisfaction</div>
+                </div>
+                <div class="text-xs px-4 py-1.5 bg-zinc-950 border border-zinc-800 rounded-3xl text-zinc-400 flex items-center gap-x-2">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>18+ • Age verified community</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Gallery Section -->
+    <div id="gallery" class="max-w-screen-2xl mx-auto px-8 pt-16 pb-12">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-4 mb-8">
+            <div>
+                <div class="uppercase tracking-[3px] text-xs font-bold text-pink-500 mb-1">THE VAULT</div>
+                <h2 class="section-header">Featured in the Gallery</h2>
+                <p class="text-zinc-400 mt-1">Fresh AI-crafted exclusives updated daily. Members get everything.</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-2" id="gallery-filters">
+                <button onclick="filterGallery('all')" class="filter-btn active px-5 py-2 text-sm font-medium border border-zinc-700 hover:border-zinc-500 rounded-3xl" data-filter="all">All</button>
+                <button onclick="filterGallery('soles')" class="filter-btn px-5 py-2 text-sm font-medium border border-zinc-700 hover:border-zinc-500 rounded-3xl" data-filter="soles">Soles</button>
+                <button onclick="filterGallery('toes')" class="filter-btn px-5 py-2 text-sm font-medium border border-zinc-700 hover:border-zinc-500 rounded-3xl" data-filter="toes">Toes</button>
+                <button onclick="filterGallery('fishnets')" class="filter-btn px-5 py-2 text-sm font-medium border border-zinc-700 hover:border-zinc-500 rounded-3xl" data-filter="fishnets">Fishnets</button>
+                <button onclick="filterGallery('heels')" class="filter-btn px-5 py-2 text-sm font-medium border border-zinc-700 hover:border-zinc-500 rounded-3xl" data-filter="heels">Heels</button>
+            </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4" id="gallery-grid">
+            
+            <!-- Gallery Item 1 -->
+            <div class="foot-card group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800" data-category="soles">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://picsum.photos/id/1005/600/450" class="gallery-img w-full h-full object-cover" alt="Perfect bare soles on silk sheets">
+                    <div class="absolute top-4 right-4">
+                        <span class="premium-badge text-[10px] font-bold tracking-wider px-3 py-0.5 bg-zinc-950/90 rounded-2xl border border-rose-900/50">MEMBER ONLY</span>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-1/2"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <div>
+                            <div class="font-semibold">Midnight Soles</div>
+                            <div class="text-xs text-zinc-400">4K • 12 photos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 py-4 flex items-center justify-between text-sm">
+                    <div class="flex items-center gap-x-1.5 text-emerald-400">
+                        <i class="fa-solid fa-eye text-xs"></i>
+                        <span class="font-medium">8.4k</span>
+                    </div>
+                    <button onclick="likeContent(this)" class="flex items-center gap-x-1 text-zinc-400 hover:text-pink-400 transition-colors">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="text-xs font-medium">2.1k</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="foot-card group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800" data-category="fishnets">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://picsum.photos/id/1011/600/450" class="gallery-img w-full h-full object-cover" alt="Fishnet stockings close up">
+                    <div class="absolute top-4 right-4">
+                        <span class="premium-badge text-[10px] font-bold tracking-wider px-3 py-0.5 bg-zinc-950/90 rounded-2xl border border-rose-900/50">MEMBER ONLY</span>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-1/2"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <div>
+                            <div class="font-semibold">Black Widow Fishnets</div>
+                            <div class="text-xs text-zinc-400">Video + 18 photos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 py-4 flex items-center justify-between text-sm">
+                    <div class="flex items-center gap-x-1.5 text-emerald-400">
+                        <i class="fa-solid fa-eye text-xs"></i>
+                        <span class="font-medium">14.2k</span>
+                    </div>
+                    <button onclick="likeContent(this)" class="flex items-center gap-x-1 text-zinc-400 hover:text-pink-400 transition-colors">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="text-xs font-medium">4.8k</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="foot-card group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800" data-category="toes">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://picsum.photos/id/160/600/450" class="gallery-img w-full h-full object-cover" alt="Pretty pedicured toes">
+                    <div class="absolute top-4 right-4">
+                        <span class="px-3 py-0.5 text-[10px] font-bold tracking-wider bg-emerald-900/90 text-emerald-300 rounded-2xl border border-emerald-700">FREE TEASE</span>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-1/2"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <div>
+                            <div class="font-semibold">French Tip Tease</div>
+                            <div class="text-xs text-zinc-400">8 photos • Public</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 py-4 flex items-center justify-between text-sm">
+                    <div class="flex items-center gap-x-1.5 text-emerald-400">
+                        <i class="fa-solid fa-eye text-xs"></i>
+                        <span class="font-medium">31.7k</span>
+                    </div>
+                    <button onclick="likeContent(this)" class="flex items-center gap-x-1 text-zinc-400 hover:text-pink-400 transition-colors">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="text-xs font-medium">9.3k</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="foot-card group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800" data-category="heels">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://picsum.photos/id/201/600/450" class="gallery-img w-full h-full object-cover" alt="Stiletto heels and arched feet">
+                    <div class="absolute top-4 right-4">
+                        <span class="premium-badge text-[10px] font-bold tracking-wider px-3 py-0.5 bg-zinc-950/90 rounded-2xl border border-rose-900/50">MEMBER ONLY</span>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-1/2"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                        <div>
+                            <div class="font-semibold">Red Bottom Worship</div>
+                            <div class="text-xs text-zinc-400">6K video + photos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 py-4 flex items-center justify-between text-sm">
+                    <div class="flex items-center gap-x-1.5 text-emerald-400">
+                        <i class="fa-solid fa-eye text-xs"></i>
+                        <span class="font-medium">6.9k</span>
+                    </div>
+                    <button onclick="likeContent(this)" class="flex items-center gap-x-1 text-zinc-400 hover:text-pink-400 transition-colors">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="text-xs font-medium">1.8k</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- More items... (abbreviated for brevity but full in real file) -->
+            <div class="foot-card group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800" data-category="soles">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://picsum.photos/id/251/600/450" class="gallery-img w-full h-full object-cover" alt="Soft wrinkled soles close-up">
+                    <div class="absolute top-4 right-4">
+                        <span class="premium-badge text-[10px] font-bold tracking-wider px-3 py-0.5 bg-zinc-950/90 rounded-2xl border border-rose-900/50">MEMBER ONLY</span>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-1/2"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <div class="font-semibold">Wrinkled Sole Study</div>
+                    </div>
+                </div>
+                <div class="px-4 py-4 flex items-center justify-between text-sm">
+                    <div class="flex items-center gap-x-1.5 text-emerald-400"><i class="fa-solid fa-eye text-xs"></i> <span class="font-medium">11.3k</span></div>
+                    <button onclick="likeContent(this)" class="flex items-center gap-x-1 text-zinc-400 hover:text-pink-400"><i class="fa-regular fa-heart"></i> <span class="text-xs font-medium">3.4k</span></button>
+                </div>
+            </div>
+            
+            <div class="foot-card group bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800" data-category="fishnets">
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="https://picsum.photos/id/29/600/450" class="gallery-img w-full h-full object-cover" alt="Torn fishnets artistic shot">
+                    <div class="absolute top-4 right-4"><span class="premium-badge text-[10px] font-bold tracking-wider px-3 py-0.5 bg-zinc-950/90 rounded-2xl border border-rose-900/50">MEMBER ONLY</span></div>
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-1/2"></div>
+                    <div class="absolute bottom-4 left-4"><div class="font-semibold">Ripped Fishnet Session</div></div>
+                </div>
+                <div class="px-4 py-4 flex items-center justify-between text-sm">
+                    <div class="flex items-center gap-x-1.5 text-emerald-400"><i class="fa-solid fa-eye text-xs"></i> <span class="font-medium">7.8k</span></div>
+                    <button onclick="likeContent(this)" class="flex items-center gap-x-1 text-zinc-400 hover:text-pink-400"><i class="fa-regular fa-heart"></i> <span class="text-xs font-medium">2.9k</span></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <button onclick="showJoinModal()" 
+                    class="inline-flex items-center gap-x-2 text-pink-400 hover:text-rose-300 font-semibold text-sm tracking-wider">
+                VIEW ALL 1,284 EXCLUSIVES <i class="fa-solid fa-arrow-right ml-1"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Shop Teaser -->
+    <div id="shop" class="bg-zinc-900 border-y border-zinc-800 py-16">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <div class="text-pink-500 text-xs tracking-[2px] font-bold">THE SHOP</div>
+                    <h2 class="section-header">Take something home</h2>
+                </div>
+                <a href="#" class="hidden md:flex items-center text-sm font-medium text-pink-400 hover:text-rose-300">Browse full shop →</a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <!-- Product 1 -->
+                <div class="group bg-zinc-950 border border-zinc-800 rounded-3xl p-5 flex flex-col">
+                    <div class="aspect-video bg-zinc-900 rounded-2xl mb-5 overflow-hidden relative">
+                        <img src="https://picsum.photos/id/160/600/340" class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="Custom foot video pack">
+                        <div class="absolute top-3 right-3 bg-zinc-950/90 text-xs px-3 py-1 rounded-2xl font-medium">Digital</div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="font-semibold text-lg">“Sole Obsession” Video Pack</div>
+                        <div class="text-sm text-zinc-400 mt-0.5">42 min • 4K • 3 angles</div>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-5 border-t border-zinc-800">
+                        <div>
+                            <span class="text-2xl font-bold">$24</span>
+                            <span class="text-xs text-zinc-500">/ one-time</span>
+                        </div>
+                        <button onclick="addToCart(this, 'Sole Obsession Video Pack', 24)" 
+                                class="px-6 py-2 text-xs font-bold bg-white text-zinc-950 hover:bg-zinc-200 active:bg-zinc-300 rounded-3xl transition-colors">ADD TO CART</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="group bg-zinc-950 border border-zinc-800 rounded-3xl p-5 flex flex-col">
+                    <div class="aspect-video bg-zinc-900 rounded-2xl mb-5 overflow-hidden relative">
+                        <img src="https://picsum.photos/id/201/600/340" class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="Worn black heels">
+                        <div class="absolute top-3 right-3 bg-zinc-950/90 text-xs px-3 py-1 rounded-2xl font-medium">Worn</div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="font-semibold text-lg">Worn 3-Day Black Stilettos</div>
+                        <div class="text-sm text-zinc-400 mt-0.5">Size 7 • Includes photos + scent pack</div>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-5 border-t border-zinc-800">
+                        <div>
+                            <span class="text-2xl font-bold">$89</span>
+                        </div>
+                        <button onclick="addToCart(this, 'Worn 3-Day Black Stilettos', 89)" 
+                                class="px-6 py-2 text-xs font-bold bg-white text-zinc-950 hover:bg-zinc-200 active:bg-zinc-300 rounded-3xl transition-colors">ADD TO CART</button>
+                    </div>
+                </div>
+                
+                <div class="group bg-zinc-950 border border-zinc-800 rounded-3xl p-5 flex flex-col">
+                    <div class="aspect-video bg-zinc-900 rounded-2xl mb-5 overflow-hidden relative">
+                        <img src="https://picsum.photos/id/251/600/340" class="w-full h-full object-cover group-hover:scale-105 transition-transform" alt="Custom request example">
+                    </div>
+                    <div class="flex-1">
+                        <div class="font-semibold text-lg">Custom Foot Session</div>
+                        <div class="text-sm text-zinc-400 mt-0.5">Your script • 10-20 min video</div>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-5 border-t border-zinc-800">
+                        <div>
+                            <span class="text-2xl font-bold">$65</span>
+                            <span class="text-xs text-zinc-500">starting</span>
+                        </div>
+                        <button onclick="showCustomModal()" 
+                                class="px-5 py-2 text-xs font-bold border border-zinc-700 hover:bg-zinc-900 rounded-3xl transition-colors">REQUEST</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Community Teaser -->
+    <div id="community" class="max-w-screen-2xl mx-auto px-8 py-16">
+        <div class="max-w-2xl mb-8">
+            <div class="text-pink-500 text-xs tracking-[2px] font-bold">THE COMMUNITY</div>
+            <h2 class="section-header">Real foot boys. Real talk.</h2>
+            <p class="text-zinc-400">Private forums, group chats, and member galleries. No judgment. Just pure obsession.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-5">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="flex gap-x-3">
+                    <div class="w-9 h-9 rounded-2xl overflow-hidden flex-shrink-0"><img src="https://picsum.photos/id/1005/36/36" class="object-cover"></div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between text-sm">
+                            <span class="font-semibold">soleworshipper92</span>
+                            <span class="text-xs text-zinc-500">2h ago</span>
+                        </div>
+                        <p class="text-sm text-zinc-300 mt-1.5">"Just got my custom from @feetfuckers — the way she curled her toes at the end... I’m ruined. Worth every penny."</p>
+                        <div class="flex gap-x-4 text-xs mt-3 text-zinc-500">
+                            <span><i class="fa-regular fa-heart mr-1"></i> 184</span>
+                            <span>32 replies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="flex gap-x-3">
+                    <div class="w-9 h-9 rounded-2xl overflow-hidden flex-shrink-0"><img src="https://picsum.photos/id/1011/36/36" class="object-cover"></div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between text-sm">
+                            <span class="font-semibold">archaddict</span>
+                            <span class="text-xs text-zinc-500">yesterday</span>
+                        </div>
+                        <p class="text-sm text-zinc-300 mt-1.5">"Anyone else obsessed with deep wrinkles after a long day in heels? Drop your favorite shots below 👇"</p>
+                        <div class="flex gap-x-4 text-xs mt-3 text-zinc-500">
+                            <span><i class="fa-regular fa-heart mr-1"></i> 67</span>
+                            <span>19 replies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="flex gap-x-3">
+                    <div class="w-9 h-9 rounded-2xl overflow-hidden flex-shrink-0"><img src="https://picsum.photos/id/1009/36/36" class="object-cover"></div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between text-sm">
+                            <span class="font-semibold">toegoddessfan</span>
+                            <span class="text-xs text-zinc-500">3d ago</span>
+                        </div>
+                        <p class="text-sm text-zinc-300 mt-1.5">"The new fishnet drop is insane. Already on my third watch. This community is actually the best part."</p>
+                        <div class="flex gap-x-4 text-xs mt-3 text-zinc-500">
+                            <span><i class="fa-regular fa-heart mr-1"></i> 291</span>
+                            <span>47 replies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <button onclick="showJoinModal()" class="text-sm font-semibold px-8 py-3 border border-zinc-700 hover:bg-zinc-900 rounded-3xl">Join the conversation →</button>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="bg-zinc-900 border-t border-zinc-800 py-16">
+        <div class="max-w-screen-2xl mx-auto px-8 text-center">
+            <h2 class="text-5xl font-bold tracking-tighter heading-serif mb-3">Ready to stop scrolling and start worshipping?</h2>
+            <p class="text-xl text-zinc-400 max-w-md mx-auto mb-8">Join thousands of foot lovers who get fresh content, real connections, and custom experiences every week.</p>
+            
+            <button onclick="showJoinModal()" 
+                    class="mx-auto flex items-center gap-x-3 bg-fuchsia-600 hover:bg-fuchsia-700 active:bg-rose-800 transition-colors text-white font-extrabold text-xl px-14 h-[62px] rounded-3xl shadow-xl">
+                <span>JOIN THE VAULT — FIRST MONTH 40% OFF</span>
+            </button>
+            <p class="text-xs text-zinc-500 mt-4">Cancel anytime. 18+ only. Discreet billing.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-900 py-10 text-sm text-zinc-500">
+        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between gap-y-6 text-xs">
+            <div>© 2026 FeetFuckers. All rights reserved. 18+ only.</div>
+            <div class="flex gap-x-6">
+                <a href="#" class="hover:text-zinc-300">Terms</a>
+                <a href="#" class="hover:text-zinc-300">Privacy</a>
+                <a href="#" class="hover:text-zinc-300">2257</a>
+                <a href="#" class="hover:text-zinc-300">Support</a>
+                <a href="#" class="hover:text-zinc-300">DMCA</a>
+            </div>
+            <div>Discreet billing • Age verified</div>
+        </div>
+    </footer>
+
+    <!-- Join Modal -->
+    <div id="join-modal" onclick="if (event.target.id === 'join-modal') hideJoinModal()" class="hidden fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="bg-zinc-900 border border-zinc-700 max-w-md w-full rounded-3xl p-8">
+            <div class="flex justify-between mb-6">
+                <div>
+                    <div class="text-pink-500 text-xs tracking-[2px]">MEMBERSHIP</div>
+                    <div class="text-4xl font-bold tracking-tighter">Join the Vault</div>
+                </div>
+                <button onclick="hideJoinModal()" class="text-3xl text-zinc-500 hover:text-white">×</button>
+            </div>
+            
+            <div class="space-y-3 mb-8">
+                <div class="flex justify-between items-center p-5 border border-zinc-700 rounded-3xl">
+                    <div>
+                        <div class="font-bold">Premium</div>
+                        <div class="text-sm text-zinc-400">$14.99 / month</div>
+                    </div>
+                    <button onclick="selectPlan(this, 'Premium', 14.99)" class="px-8 py-2 text-sm font-bold bg-white text-zinc-950 rounded-3xl">Choose</button>
+                </div>
+                <div class="flex justify-between items-center p-5 border border-zinc-700 rounded-3xl bg-zinc-950">
+                    <div>
+                        <div class="font-bold flex items-center gap-x-2">VIP <span class="text-[10px] px-2 py-px bg-fuchsia-600 text-white rounded">BEST VALUE</span></div>
+                        <div class="text-sm text-zinc-400">$29 / month • Save 35%</div>
+                    </div>
+                    <button onclick="selectPlan(this, 'VIP', 29)" class="px-8 py-2 text-sm font-bold bg-fuchsia-600 hover:bg-fuchsia-700 text-white rounded-3xl">Choose</button>
+                </div>
+            </div>
+            
+            <div class="text-[10px] text-center text-zinc-500">Billed discreetly via CCBill. Cancel anytime. Full access to galleries, forums &amp; customs queue.</div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" onclick="if (event.target.id === 'login-modal') hideLoginModal()" class="hidden fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="bg-zinc-900 border border-zinc-700 max-w-sm w-full rounded-3xl p-8">
+            <div class="text-center mb-6">
+                <div class="text-3xl font-bold tracking-tighter mb-1">Welcome back</div>
+                <div class="text-sm text-zinc-400">Sign in to access the vault</div>
+            </div>
+            
+            <div class="space-y-4">
+                <input type="text" placeholder="Username or email" class="w-full bg-zinc-950 border border-zinc-700 focus:border-zinc-500 transition-colors px-5 py-3.5 rounded-3xl text-sm outline-none">
+                <input type="password" placeholder="Password" class="w-full bg-zinc-950 border border-zinc-700 focus:border-zinc-500 transition-colors px-5 py-3.5 rounded-3xl text-sm outline-none">
+                
+                <button onclick="loginUser()" class="w-full py-4 font-bold bg-white text-zinc-950 rounded-3xl active:scale-[0.985] transition-all">Sign In</button>
+            </div>
+            
+            <div class="text-center text-xs mt-6 text-zinc-400">Forgot password? <span class="text-pink-400 cursor-pointer">Reset here</span></div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#e11d48');
+        }
+        
+        // Gallery Filter
+        let currentFilter = 'all';
+        
+        function filterGallery(category) {
+            currentFilter = category;
+            
+            // Update active button styles
+            document.querySelectorAll('#gallery-filters button').forEach(btn => {
+                btn.classList.remove('active', 'bg-fuchsia-600', 'text-white', 'border-fuchsia-600');
+                btn.classList.add('border-zinc-700');
+                
+                if ((category === 'all' && btn.getAttribute('data-filter') === 'all') || 
+                    btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('active', 'bg-fuchsia-600', 'text-white', 'border-fuchsia-600');
+                    btn.classList.remove('border-zinc-700');
+                }
+            });
+            
+            // Filter cards
+            const cards = document.querySelectorAll('#gallery-grid .foot-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+        
+        // Like functionality
+        function likeContent(element) {
+            const icon = element.querySelector('i');
+            const countSpan = element.querySelector('span');
+            let count = parseInt(countSpan.innerText.replace('k', '')) || 0;
+            
+            if (icon.classList.contains('fa-regular')) {
+                icon.classList.remove('fa-regular');
+                icon.classList.add('fa-solid', 'text-pink-500');
+                count = count + 0.1;
+                countSpan.innerText = count.toFixed(1) + 'k';
+            } else {
+                icon.classList.add('fa-regular');
+                icon.classList.remove('fa-solid', 'text-pink-500');
+                count = count - 0.1;
+                countSpan.innerText = count.toFixed(1) + 'k';
+            }
+        }
+        
+        // Add to cart (demo)
+        function addToCart(btn, productName, price) {
+            const originalText = btn.innerHTML;
+            btn.innerHTML = `<i class="fa-solid fa-check mr-1.5"></i> ADDED`;
+            btn.disabled = true;
+            btn.classList.add('!bg-emerald-600', '!text-white');
+            
+            // Fake cart notification
+            showToast(`${productName} added to cart ($${price})`);
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.classList.remove('!bg-emerald-600', '!text-white');
+            }, 2200);
+        }
+        
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 bg-zinc-800 border border-zinc-700 text-sm px-6 py-3 rounded-3xl flex items-center gap-x-2 shadow-xl z-[200]`;
+            toast.innerHTML = `
+                <i class="fa-solid fa-shopping-cart text-emerald-400"></i>
+                <span>${message}</span>
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.transition = 'all 0.3s ease';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 2600);
+        }
+        
+        // Modals
+        function showJoinModal() {
+            document.getElementById('join-modal').classList.remove('hidden');
+            document.getElementById('join-modal').classList.add('flex');
+        }
+        
+        function hideJoinModal() {
+            const modal = document.getElementById('join-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+        
+        function showLoginModal() {
+            document.getElementById('login-modal').classList.remove('hidden');
+            document.getElementById('login-modal').classList.add('flex');
+        }
+        
+        function hideLoginModal() {
+            const modal = document.getElementById('login-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+        
+        function selectPlan(element, planName, price) {
+            hideJoinModal();
+            
+            const msg = `Thanks! You've selected the ${planName} plan ($${price}/mo). In a real site this would redirect to CCBill checkout.`;
+            
+            setTimeout(() => {
+                alert(msg + "\n\n(Prototype only — real checkout would use CCBill integration)");
+            }, 300);
+        }
+        
+        function loginUser() {
+            const modal = document.getElementById('login-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            
+            setTimeout(() => {
+                alert("Logged in successfully (demo). In production this would unlock member-only content via MemberPress rules.");
+            }, 400);
+        }
+        
+        function showCustomModal() {
+            alert("Custom request form would open here (WPForms or Gravity Forms in real WordPress site). You can collect detailed instructions + payment.");
+        }
+        
+        // Keyboard escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const join = document.getElementById('join-modal');
+                const login = document.getElementById('login-modal');
+                if (!join.classList.contains('hidden')) hideJoinModal();
+                else if (!login.classList.contains('hidden')) hideLoginModal();
+            }
+        });
+        
+        // Initialize everything
+        function init() {
+            initializeTailwind();
+            
+            // Make first filter button active by default
+            const allBtn = document.querySelector('#gallery-filters button[data-filter="all"]');
+            if (allBtn) allBtn.classList.add('active', 'bg-fuchsia-600', 'text-white', 'border-fuchsia-600');
+            
+            // Random like counts animation on load (optional polish)
+            console.log('%c[FeetFuckers] Prototype initialized — ready for WordPress port.', 'color:#444');
+            
+            // Optional: Auto-filter demo after 8 seconds (commented)
+            // setTimeout(() => { filterGallery('soles'); }, 8000);
+        }
+        
+        window.onload = init;
+    </script>
+</body>
+</html>
