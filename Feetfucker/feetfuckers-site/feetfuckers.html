@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FeetFuckers.com - The premier online community for foot fetish enthusiasts. Connect, share, explore safely.">
+    <meta property="og:title" content="FeetFuckers • Feet Fetish Community">
+    <meta property="og:description" content="Join the ultimate foot fetish community. Galleries, forums, chats & more.">
+    <meta property="og:image" content="https://picsum.photos/id/1015/1200/630">
+    <title>FeetFuckers • The Foot Fetish Community</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: #e11d48;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-header {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-link {
+            transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #e11d48;
+        }
+
+        .feature-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                       box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .hero-bg {
+            background: radial-gradient(at center, #4c1d95 0%, #1f1235 70%);
+        }
+
+        .pink-glow {
+            text-shadow: 0 0 20px #e11d48;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200 antialiased">
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-rose-600 rounded-2xl flex items-center justify-center overflow-hidden">
+                        <img src="/home/workdir/artifacts/searched_images/DZySN.jpg" alt="Feet Icon" class="w-8 h-8 object-contain">
+                    </div>
+                    <div>
+                        <span class="font-display text-3xl font-bold tracking-tighter text-white">Feet<span class="text-rose-500">Fuckers</span></span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="#gallery" class="nav-link text-zinc-400 hover:text-white font-medium">Gallery</a>
+                    <a href="#community" class="nav-link text-zinc-400 hover:text-white font-medium">Community</a>
+                    <a href="#forums" class="nav-link text-zinc-400 hover:text-white font-medium">Forums</a>
+                    <a href="#join" class="nav-link text-zinc-400 hover:text-white font-medium">Join</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <button id="theme-toggle" 
+                            class="w-9 h-9 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/5 rounded-2xl transition-colors"
+                            aria-label="Toggle dark mode">
+                        <i class="fa-solid fa-moon text-lg"></i>
+                    </button>
+                    
+                    <a href="#" class="px-5 py-2.5 text-sm font-semibold text-zinc-300 hover:text-white transition-colors">Log in</a>
+                    
+                    <button onclick="showDemoModal()"
+                            class="px-6 py-2.5 bg-rose-600 hover:bg-rose-500 transition-all font-semibold text-sm rounded-3xl flex items-center gap-x-2">
+                        <span>Join Free</span>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/5 rounded-2xl transition-colors"
+                        aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-zinc-950">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-sm">
+                <a href="#gallery" class="py-2 text-zinc-300 hover:text-white">Gallery</a>
+                <a href="#community" class="py-2 text-zinc-300 hover:text-white">Community</a>
+                <a href="#forums" class="py-2 text-zinc-300 hover:text-white">Forums</a>
+                <a href="#join" class="py-2 text-zinc-300 hover:text-white">Join Now</a>
+                
+                <div class="pt-4 border-t border-white/10 flex flex-col gap-y-3">
+                    <a href="#" class="py-2 text-zinc-300 hover:text-white">Log in</a>
+                    <button onclick="showDemoModal(); document.getElementById('mobile-menu').classList.add('hidden')"
+                            class="w-full py-3 bg-rose-600 font-semibold rounded-3xl text-sm">
+                        Join Free
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="pt-20 pb-16 md:pt-24 md:pb-24 hero-bg border-b border-white/10 relative overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/5 border border-white/10 mb-6">
+                    <div class="w-2 h-2 bg-rose-500 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-medium text-rose-400">18+ • Safe &amp; Consensual</span>
+                </div>
+
+                <h1 class="section-header tracking-tighter text-balance mb-6 text-white">
+                    Celebrate the <span class="text-rose-500 pink-glow">Art of Feet</span><br>
+                    in a welcoming community
+                </h1>
+                
+                <p class="max-w-lg mx-auto text-xl text-zinc-400 mb-10">
+                    Connect with fellow enthusiasts. Share your passion. Discover stunning galleries, engaging forums, and real connections.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="showDemoModal()"
+                            class="group w-full sm:w-auto px-8 py-4 bg-rose-600 hover:bg-rose-500 transition-all font-semibold rounded-3xl flex items-center justify-center gap-x-3 text-lg">
+                        <span>Join the Community</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition-transform"></i>
+                    </button>
+                    
+                    <button onclick="document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' })"
+                            class="w-full sm:w-auto px-8 py-4 border border-white/20 hover:bg-white/5 font-semibold rounded-3xl flex items-center justify-center gap-x-3 text-lg transition-all">
+                        <i class="fa-solid fa-images"></i>
+                        <span>Browse Gallery</span>
+                    </button>
+                </div>
+
+                <div class="mt-12 flex items-center justify-center gap-x-8 text-sm">
+                    <div class="flex -space-x-3">
+                        <img src="https://i.pravatar.cc/32?img=65" class="w-8 h-8 rounded-2xl ring-2 ring-zinc-950 object-cover" alt="">
+                        <img src="https://i.pravatar.cc/32?img=44" class="w-8 h-8 rounded-2xl ring-2 ring-zinc-950 object-cover" alt="">
+                    </div>
+                    <span class="text-zinc-400">10,000+ members worshipping the sole</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative image overlay -->
+        <div class="absolute bottom-0 right-12 hidden lg:block">
+            <img src="/home/workdir/artifacts/searched_images/h0SqF.jpg" alt="Elegant feet" class="w-96 h-auto opacity-80 rounded-tl-3xl shadow-2xl">
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="border-b border-white/10 py-6 bg-zinc-900/50">
+        <div class="max-w-screen-2xl mx-auto px-6 text-center">
+            <p class="text-xs uppercase tracking-widest text-zinc-500">Trusted by foot lovers worldwide • Discreet &amp; Private</p>
+        </div>
+    </div>
+
+    <!-- GALLERY TEASER -->
+    <section id="gallery" class="max-w-screen-2xl mx-auto px-6 md:px-12 py-20">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-rose-400 mb-3">EXPLORE THE BEAUTY</div>
+                <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter">Stunning Member Galleries</h2>
+            </div>
+            <a href="#" onclick="showDemoModal()" class="hidden md:flex items-center gap-x-2 text-rose-400 hover:text-rose-300 font-medium">
+                View all <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-square rounded-3xl overflow-hidden">
+                <img src="/home/workdir/artifacts/searched_images/h0SqF.jpg" alt="Black heels" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="aspect-square rounded-3xl overflow-hidden">
+                <img src="/home/workdir/artifacts/searched_images/l0rOi.jpg" alt="Red light heels" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="aspect-square rounded-3xl overflow-hidden">
+                <img src="/home/workdir/artifacts/searched_images/1grw2.jpg" alt="Platform heels" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="aspect-square rounded-3xl overflow-hidden">
+                <img src="/home/workdir/artifacts/searched_images/OsaCp.jpg" alt="Bare feet" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES / COMMUNITY -->
+    <section id="community" class="bg-zinc-900/50 border-y border-white/10 py-20">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <div class="max-w-2xl mb-12">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-rose-400 mb-3">FOR THE COMMUNITY</div>
+                <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter">Everything you crave in one place</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="feature-card glass rounded-3xl p-8 border border-white/10">
+                    <div class="w-14 h-14 bg-rose-600/10 text-rose-400 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-images text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Curated Galleries</h3>
+                    <p class="text-zinc-400">High-quality photos and videos from members. Categories for every taste: soles, toes, heels, worship.</p>
+                </div>
+                
+                <div class="feature-card glass rounded-3xl p-8 border border-white/10">
+                    <div class="w-14 h-14 bg-purple-600/10 text-purple-400 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-comments text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Lively Forums</h3>
+                    <p class="text-zinc-400">Discuss techniques, share stories, ask for advice. Moderated for respect and consent.</p>
+                </div>
+                
+                <div class="feature-card glass rounded-3xl p-8 border border-white/10">
+                    <div class="w-14 h-14 bg-emerald-600/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Private Chats</h3>
+                    <p class="text-zinc-400">Connect one-on-one or in groups. Video calls, voice, and custom rooms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="max-w-screen-2xl mx-auto px-6 md:px-12 py-20">
+        <div class="max-w-2xl mx-auto text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter mb-4">Start worshipping in seconds</h2>
+            <p class="text-zinc-400">Safe. Private. Fun.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="text-center">
+                <div class="mx-auto w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-3xl mb-6">1</div>
+                <h4 class="text-xl font-semibold mb-3">Sign Up Anonymously</h4>
+                <p class="text-zinc-400">Quick registration. No personal info required beyond email.</p>
+            </div>
+            <div class="text-center">
+                <div class="mx-auto w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-3xl mb-6">2</div>
+                <h4 class="text-xl font-semibold mb-3">Upload &amp; Browse</h4>
+                <p class="text-zinc-400">Share your collection or dive into thousands of photos and videos.</p>
+            </div>
+            <div class="text-center">
+                <div class="mx-auto w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-3xl mb-6">3</div>
+                <h4 class="text-xl font-semibold mb-3">Connect Deeply</h4>
+                <p class="text-zinc-400">Chat, meet like-minded people, and indulge your passion responsibly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="max-w-screen-2xl mx-auto px-6 md:px-12 py-20 bg-zinc-900/30">
+        <div class="max-w-2xl mb-12">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-rose-400 mb-3">REAL MEMBERS</div>
+            <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter">What our community says</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass rounded-3xl p-8 border border-white/10">
+                <div class="flex gap-1 text-amber-400 mb-6">★★★★★</div>
+                <p class="italic">"Finally a place where I can express my love for feet without judgment. The galleries are incredible!"</p>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div class="w-10 h-10 bg-zinc-700 rounded-full"></div>
+                    <div>
+                        <div class="font-semibold">SoleLover92</div>
+                        <div class="text-xs text-zinc-500">Member since 2025</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass rounded-3xl p-8 border border-white/10">
+                <div class="flex gap-1 text-amber-400 mb-6">★★★★☆</div>
+                <p class="italic">"The community is so welcoming. Found my perfect foot model match here. Highly recommend."</p>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div class="w-10 h-10 bg-zinc-700 rounded-full"></div>
+                    <div>
+                        <div class="font-semibold">ToeWorshipper</div>
+                        <div class="text-xs text-zinc-500">Verified Member</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass rounded-3xl p-8 border border-white/10">
+                <div class="flex gap-1 text-amber-400 mb-6">★★★★★</div>
+                <p class="italic">"Best decision I made. Private chats are fire and the mods keep everything respectful."</p>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div class="w-10 h-10 bg-zinc-700 rounded-full"></div>
+                    <div>
+                        <div class="font-semibold">HeelQueenFan</div>
+                        <div class="text-xs text-zinc-500">Premium Member</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="border-t border-white/10 py-20 text-center bg-gradient-to-b from-transparent via-rose-950/30 to-transparent">
+        <div class="max-w-xl mx-auto px-6">
+            <h2 class="text-5xl font-semibold tracking-tighter mb-6">Ready to step into the community?</h2>
+            <p class="text-xl text-zinc-400 mb-10">Join thousands of enthusiasts celebrating feet in a safe, fun environment.</p>
+            
+            <button onclick="showDemoModal()" 
+                    class="px-12 py-5 bg-rose-600 hover:bg-rose-500 text-white font-semibold text-xl rounded-3xl inline-flex items-center gap-x-4 transition-all">
+                Create Free Account
+                <i class="fa-solid fa-football"></i>
+            </button>
+            <p class="text-xs text-zinc-500 mt-6">Must be 18+. Discreet billing. Cancel anytime.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 border-t border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-16">
+            <div class="flex flex-col md:flex-row justify-between gap-12">
+                <div>
+                    <div class="flex items-center gap-x-3 mb-6">
+                        <div class="w-9 h-9 bg-rose-600 rounded-2xl flex items-center justify-center">
+                            <span class="text-white font-bold text-2xl">FF</span>
+                        </div>
+                        <span class="font-display text-3xl tracking-tighter">FeetFuckers</span>
+                    </div>
+                    <p class="max-w-xs text-zinc-400">The premier destination for foot fetishists since 2026.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+                    <div>
+                        <div class="font-semibold mb-4">Platform</div>
+                        <div class="space-y-2 text-zinc-400">
+                            <div><a href="#" class="hover:text-white">Gallery</a></div>
+                            <div><a href="#" class="hover:text-white">Forums</a></div>
+                            <div><a href="#" class="hover:text-white">Live Chat</a></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-semibold mb-4">Community</div>
+                        <div class="space-y-2 text-zinc-400">
+                            <div><a href="#" class="hover:text-white">Guidelines</a></div>
+                            <div><a href="#" class="hover:text-white">Consent</a></div>
+                            <div><a href="#" class="hover:text-white">Support</a></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-semibold mb-4">Legal</div>
+                        <div class="space-y-2 text-zinc-400">
+                            <div><a href="#" class="hover:text-white">Privacy</a></div>
+                            <div><a href="#" class="hover:text-white">Terms</a></div>
+                            <div><a href="#" class="hover:text-white">18+ Policy</a></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-semibold mb-4">Connect</div>
+                        <div class="flex gap-x-4 text-xl">
+                            <a href="#" class="hover:text-rose-400"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="hover:text-rose-400"><i class="fa-brands fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-8 border-t border-white/10 text-center text-xs text-zinc-500">
+                © 2026 FeetFuckers.com • All Rights Reserved • For entertainment purposes only
+            </div>
+        </div>
+    </footer>
+
+    <!-- DEMO MODAL -->
+    <div id="demo-modal" onclick="if (event.target.id === 'demo-modal') hideDemoModal()" 
+         class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" 
+             class="demo-modal bg-zinc-900 border border-rose-500/30 rounded-3xl max-w-md w-full p-8 shadow-2xl">
+            <div class="flex justify-between items-start mb-6">
+                <div>
+                    <div class="font-display text-3xl tracking-tighter">Join FeetFuckers</div>
+                    <div class="text-rose-400 text-sm mt-1">Free to start • 18+</div>
+                </div>
+                <button onclick="hideDemoModal()" class="text-zinc-400 hover:text-white text-3xl leading-none">×</button>
+            </div>
+
+            <form id="demo-form" onsubmit="submitDemoForm(event)">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-xs tracking-widest text-zinc-400 mb-2">USERNAME</label>
+                        <input type="text" required value="FootFan88" 
+                               class="w-full bg-zinc-950 border border-white/20 focus:border-rose-500 rounded-2xl px-6 py-4 text-white">
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-widest text-zinc-400 mb-2">EMAIL</label>
+                        <input type="email" required value="you@secret.com" 
+                               class="w-full bg-zinc-950 border border-white/20 focus:border-rose-500 rounded-2xl px-6 py-4 text-white">
+                    </div>
+                </div>
+
+                <button type="submit"
+                        class="mt-8 w-full py-4 bg-rose-600 hover:bg-rose-500 font-semibold rounded-3xl text-lg transition-all">
+                    Create My Account
+                </button>
+                
+                <div class="text-center text-[10px] text-zinc-500 mt-6">Your data stays private. We respect your kink.</div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind and other scripts from base, adapted
+        function initializeTailwind() {
+            // Tailwind ready
+        }
+
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 80) {
+                    navbar.classList.add('bg-zinc-950/95', 'backdrop-blur-md');
+                } else {
+                    navbar.classList.remove('bg-zinc-950/95', 'backdrop-blur-md');
+                }
+            });
+        }
+
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.add('fa-times');
+                    icon.classList.remove('fa-bars');
+                }
+            });
+        }
+
+        function initThemeToggle() {
+            // Simple dark mode toggle (already dark)
+            const toggle = document.getElementById('theme-toggle');
+            toggle.addEventListener('click', () => {
+                alert("Theme toggle ready for future light mode support!");
+            });
+        }
+
+        let modalOpen = false;
+
+        function showDemoModal() {
+            const modal = document.getElementById('demo-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            modalOpen = true;
+        }
+
+        function hideDemoModal() {
+            const modal = document.getElementById('demo-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modalOpen = false;
+        }
+
+        function submitDemoForm(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const orig = btn.innerHTML;
+            btn.innerHTML = `<span class="flex items-center justify-center"><i class="fa-solid fa-spinner fa-spin mr-2"></i> Creating profile...</span>`;
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = `<span class="flex items-center justify-center text-emerald-400"><i class="fa-solid fa-check mr-2"></i> Welcome, kinkster!</span>`;
+                setTimeout(() => {
+                    hideDemoModal();
+                    alert("🎉 Account created! (Demo) Welcome to FeetFuckers.com");
+                    btn.innerHTML = orig;
+                    btn.disabled = false;
+                }, 1500);
+            }, 1800);
+        }
+
+        function initializeWebsite() {
+            initializeTailwind();
+            initNavbar();
+            initMobileMenu();
+            initThemeToggle();
+            
+            console.log('%c[FeetFuckers] Site loaded. Enjoy responsibly!', 'color:#e11d48; font-weight:bold');
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeWebsite);
+        } else {
+            initializeWebsite();
+        }
+    </script>
+</body>
+</html>
